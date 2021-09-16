@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class CategoriaUsuario {
+public class NivelAcesso {
     private long id;
     private String descricao;
 }

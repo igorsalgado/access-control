@@ -8,7 +8,8 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class CategoriaUsuario {
+public class Ocorrencia {
     private long id;
+    private String nome;
     private String descricao;
 }
