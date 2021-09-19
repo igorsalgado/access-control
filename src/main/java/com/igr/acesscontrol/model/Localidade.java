@@ -1,7 +1,12 @@
 package com.igr.acesscontrol.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
+import org.springframework.stereotype.Component;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -10,9 +15,17 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class Localidade {
-    private long id;
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
     @ManyToOne
     private NivelAcesso nivelAcesso;
+
     private String descricao;
+
 }

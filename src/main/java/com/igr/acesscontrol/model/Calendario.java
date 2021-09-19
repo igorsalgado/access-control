@@ -1,6 +1,14 @@
 package com.igr.acesscontrol.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -8,7 +16,17 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class Calendario {
-    private long id;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @ManyToOne
+    private TipoData tipoData;
+
     private String descricao;
+    private LocalDateTime dataEspecial;
+
 }

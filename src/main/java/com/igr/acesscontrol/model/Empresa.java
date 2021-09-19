@@ -1,6 +1,12 @@
 package com.igr.acesscontrol.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Getter
 @Setter
@@ -8,8 +14,13 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class Empresa {
-    private long id;
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String descricao;
     private String cnpj;
     private String endereco;
