@@ -17,7 +17,6 @@ import javax.persistence.Id;
 @Entity
 @Audited
 public class JornadaTrabalho {
-
     @Id
     @GeneratedValue
     private Long id;
