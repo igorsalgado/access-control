@@ -5,7 +5,6 @@ import lombok.*;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -30,6 +29,7 @@ public class BancoHoras {
     }
     @EmbeddedId
     private BancoHorasId id;
+
     private LocalDateTime dataTrabalhada;
     private BigDecimal horasTrabalhadas;
     private BigDecimal saldoHoras;
